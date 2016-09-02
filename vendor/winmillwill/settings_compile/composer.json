@@ -1,0 +1,27 @@
+{
+    "name": "winmillwill/settings_compile",
+    "authors": [
+        {
+            "name": "Will Milton",
+            "email": "wa.milton@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/config": "*",
+        "symfony/yaml": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "extra": {
+      "branch-alias": {
+         "dev-master": "2.1.x-dev"
+      }
+    },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\Settings\\": "src/"
+        }
+    },
+    "bin": ["bin/settings_compile"]
+}

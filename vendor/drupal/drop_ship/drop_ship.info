@@ -1,0 +1,7 @@
+name = Dropkick
+description = Can I kick it? (Yes you can)
+core = 7.x
+
+dependencies[] = kw_manifests
+dependencies[] = features
+dependencies[] = views

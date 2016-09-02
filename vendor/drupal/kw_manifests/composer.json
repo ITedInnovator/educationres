@@ -1,0 +1,14 @@
+{
+    "name": "drupal/kw_manifests",
+    "type": "drupal-module",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packagist.drupal-composer.org"
+        }
+    ],
+    "require": {
+        "drupal/drupal": "7.*",
+        "drush/drush": ">=6.0.0 <8.0"
+    }
+}

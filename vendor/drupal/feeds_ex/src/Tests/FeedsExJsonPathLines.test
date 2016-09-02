@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Contains tests for FeedsExJsonPathLines.
+ */
+
+/**
+ * Unit tests for FeedsExJsonPathLines.
+ */
+class FeedsExJsonPathLinesUnitTests extends FeedsExUnitTestBase {
+
+  /**
+   * The mocked FeedsSource.
+   *
+   * @var FeedsSource
+   */
+  protected $source;
+
+  public static function getInfo() {
+    return array(
+      'name' => 'JSONPath JSON lines parser unit tests',
+      'description' => 'Unit tests for FeedsExJsonPathLines.',
+      'group' => 'Feeds EX',
+    );
+  }
+
+  public function setUp() {
+    parent::setUp();
+
+    require_once $this->moduleDir . '/src/FeedsExJsonPath.inc';
+    require_once $this->moduleDir . '/src/FeedsExJsonPathLines.inc';
+
+    $this->source = $this->getMockFeedsSource();
+    $this->downloadJsonPath();
+  }
+
+  /**
+   * Tests simple parsing.
+   */
+  public function testSimpleParsing() {
+    $parser = FeedsConfigurable::instance('FeedsExJsonPathLines', 'test_parser');
+    $fetcher_result = new FeedsFileFetcherResult($this->moduleDir . '/tests/resources/test.jsonl');
+
+    $parser->setConfig(array(
+      'sources' => array(
+        'title' => array(
+          'name' => 'Title',
+          'value' => 'name',
+        ),
+      ),
+    ));
+
+    $result = $parser->parse($this->source, $fetcher_result);
+    $this->assertEqual(count($result->items), 4, format_string('@count items parsed.', array('@count' => count($result->items))));
+
+    foreach (array('Gilbert', 'Alexa', 'May', 'Deloise') as $delta => $name) {
+      $this->assertEqual($name, $result->items[$delta]['title']);
+    }
+  }
+
+}
