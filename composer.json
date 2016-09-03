@@ -138,7 +138,8 @@
 		"drupal/bootstrap": "8.3.0-rc2",
 		"drupal/services": "7.3.17",
 		"drupal/oauth": "7.3.2",
-		"drupal/libraries": "7.2.3"
+		"drupal/libraries": "7.2.3",
+		"drupal/relation": "7.1.0"
     },
     "require-dev": {
         "behat/behat": "2.5.2",
