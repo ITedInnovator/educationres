@@ -173,14 +173,18 @@
 			},
 			"patches": {
 			"drupal/elasticsearch_connector":{
-			"7.1-dev":[
-			{
+			"7.1-dev":{
 			"title": "Exceptions when the ElasticSearch library is not available (patch)",
 			"url": "https://www.drupal.org/files/issues/elasticsearch_connector-library_not_available.patch"
 			}
-			]
-        }
-		}
+			},
+			"drupal/views": {
+			"7.3.x-dev":{
+			"title": "Patch #37 issues views-undefined_var_ajax_exposed_filter-1809958",
+			"url": "https://www.drupal.org/files/issues/views-undefined_var_ajax_exposed_filter-1809958-37.patch"
+			}
+			}
+		
 					 
     },
     "scripts": {
