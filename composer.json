@@ -179,12 +179,7 @@
 			"url": "https://www.drupal.org/files/issues/elasticsearch_connector-library_not_available.patch"
 			}
 			]
-        },
-        "drupal/views":{
-        "7.3.x-dev":[
-        {
-        "title": "Views with exposed filter (ajax enabled) inside modal window (ctools)",
-        "url": "https://www.drupal.org/files/issues/views-undefined_var_ajax_exposed_filter-1809958-37.patch"}]
+        }
 		}
 					 
     },
