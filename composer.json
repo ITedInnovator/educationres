@@ -183,8 +183,8 @@
         "drupal/views":{
         "7.3.x-dev":[
         {
-        "title": "Views with exposed filter (ajax enabled) inside modal window (ctools)",
-        "url": "https://www.drupal.org/files/issues/views-undefined_var_ajax_exposed_filter-1809958-37.patch"}]
+        "title": "Views with exposed filter (ajax enabled) inside modal window (ctools) patch 41",
+        "url": "https://www.drupal.org/files/issues/views_with_exposed-1809958-41.patch"}]
 		}
 					 
     },
