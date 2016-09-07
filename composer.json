@@ -109,7 +109,8 @@
         "drupal/entity": "7.*",
         "drupal/entityform": "7.*",
         "drupal/features": "7.2.*",
-        "drupal/feeds": "7.*",
+        "drupal/feeds": "7.2.x-dev",
+        "drupal/feeds_tamper": "7.1.x-dev",
         "drupal/job_scheduler": "7.*",
         "drupal/kw_manifests": "1.*",
         "drupal/module_filter": "7.*",
@@ -185,9 +186,16 @@
         {
         "title": "Views with exposed filter (ajax enabled) inside modal window (ctools) patch 41",
         "url": "https://www.drupal.org/files/issues/views_with_exposed-1809958-41.patch"}]
-		}
-					 
-    },
+		},
+		"drupal/feeds":{
+		"7.1.x-dev":[
+		{
+		"title": "1621602 Could not retrieve title from feed - Make title field only optional if the parser can deliver a title",
+		"url": "https://www.drupal.org/files/issues/feeds-title-optional-1621602-15.patch"
+	}
+	]
+					 }
+					 },
     "scripts": {
         "post-install-cmd": [
             "Drupal\\Tangler\\ScriptHandler::postUpdate",
