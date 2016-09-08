@@ -140,7 +140,8 @@
 		"drupal/services": "7.3.17",
 		"drupal/oauth": "7.3.2",
 		"drupal/libraries": "7.2.3",
-		"drupal/relation": "7.1.0"
+		"drupal/relation": "7.1.0",
+		"drupal/composer_manager": "7.1.x-dev"
     },
     "require-dev": {
         "behat/behat": "2.5.2",
